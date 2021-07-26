@@ -15,6 +15,10 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int variable_identifier();
 int type_of_variable();
+int type_char(c);
+int type_string(char *s);
+int type_dec(int n);
+int type_int(int n);
 
 
 /*------------------*/
