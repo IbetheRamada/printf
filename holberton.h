@@ -15,10 +15,12 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int variable_identifier();
 int type_of_variable();
-int type_char(c);
-int type_string(char *s);
-int type_dec(int n);
-int type_int(int n);
+int type_char(va_list c);
+int type_string(va_list string);
+int type_dec(va_list d);
+int type_int(va_list i);
+char *type_porcent(va_list arg);
+int *type_rev(va_list rev);
 
 
 /*------------------*/

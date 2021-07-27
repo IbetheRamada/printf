@@ -1,13 +1,14 @@
-#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
 #include "holberton.h"
 /**
  * type_char - prints character c
  * @c: Variable
  * Return: Result
  */
-int type_char(c)
+int type_char(va_list ch)
 {
-	char c;
+	char c = va_arg(ch, int );
 
 	_putchar(c);
 
@@ -19,8 +20,10 @@ int type_char(c)
  * @s: A Pointer
  * Return: Result Parameter
  */
-int type_string(char *s)
+int type_string(va_list string)
 {
+	char *s = va_arg(string, char *);
+
 	unsigned int i = 0;
 	
 	if (s == NULL)
@@ -40,92 +43,67 @@ int type_string(char *s)
  * @n: variable
  * Return: result decimal.
  */
-int type_dec(int n)
+int type_dec(va_list d)
 {
-	int num;
-	int last = n % 10;
-	int dig;
-	int exp = 1;
-	int i = 1;
+	int i = 0;
+	int mod = 1;
+	int dec;
+	unsigned int dig;
 
-	n = n / 10;
-	num = n;
-
-	if (last < 0)
+	dec = va_arg(d, int);
+	if (dec < 0)
 	{
 		_putchar('-');
-		num = -num;
-		n = -n;
-		last = -last;
+		dig = dec * -1;
 		i++;
 	}
-	if (num > 0)
+	else
+		dig = dec;
+	while (dig / mod > 9)
 	{
-		while (num / 10 != 0)
-		{
-			exp = exp * 10;
-			num = num / 10;
-		}
-		num = n;
-		while (exp > 0)
-		{
-			dig = num / exp;
-			_putchar(dig + '0');
-			num = num - (dig * exp);
-			exp = exp / 10;
-			i++;
-		}
+		mod = mod * 10;
 	}
-	_putchar(last + '0');
-
+	while (mod > 0)
+	{
+		_putchar(dig / mod + '0');
+		dig = dig % mod;
+		mod = mod / 10;
+		i++;
+	}
 	return (i);
 }
-
 /**
  * type_int- prints integer
  * @n: Variable
  * Return: result integer
  */
-int type_int(int n)
+int type_int(va_list inter)
 {
-	int num;
-	int last = n % 10;
-	int dig;
-	int exp = 1;
-	int i = 1;
-
-	n = n / 10;
-	num = n;
-
-	if (last < 0)
-	{
-		_putchar('-');
-		num = -num;
-		n = -n;
-		last = -last;
-		i++;
-	}
-	if (num > 0)
-	{
-		while (num / 10 != 0)
-		{
-			exp = exp * 10;
-			num = num / 10;
-		}
-		num = n;
-		while (exp > 0)
-		{
-			dig = num / exp;
-			_putchar(dig + '0');
-			num = num - (dig * exp);
-			exp = exp / 10;
-			i++;
-		}
-	}
-	_putchar(last + '0');
-
-	return (i);
+	int in;
+	in = type_dec(inter);
+	return (in);
 }
+
+/**
+ * type__porcent - prints "%" character
+ * @mod: list of arguments, va_list
+ *
+ * Return: the number of printed chars, int
+ */
+char *type_porcent(va_list arg)
+{
+	char *s;
+
+	s = malloc(sizeof(char) * 2);
+	if (s == NULL)
+		return (NULL);
+	s[0] = '%';
+	s[1] = '\0';
+	(void)arg;
+	return (s);
+}
+
+
 
 
 
