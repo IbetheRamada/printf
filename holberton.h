@@ -9,6 +9,13 @@
 #include <stdlib.h>
 #include <stddef.h>
 
+typedef struct t_v
+{
+	char tv;
+	int (*fn)(va_list);
+} t_v;
+
+
 /*------------------*/
 
 int _putchar(char c);

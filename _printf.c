@@ -6,57 +6,23 @@
  */
 int _printf(const char *format, ...)
 {
-	unsigned int i = 0, count = 0;
-	va_list arg;
+    int i;
+    int count = 0;
+	
+	va_list x;
 
-	va_start(arg, format);
+    t_v tvs[] = {
+		{"c", type_char},
+		{"s", type_string},
+		{"d", type_dec},
+		{"i", type_int},
+		{NULL, NULL}
 
-	if (format == NULL)
-	{
-		return (-1);
-	}
-	for (; format[i] != '%' && format[i] != '\0'; i++, count++)
-	{
-		_putchar(format[i]);
-	}	
-	switch (format[i + 1])
-	{
-                case 'c':
-                        i++;
-                        count += type_char(arg);
-                        i++;
-                        break;
-                case 's':
-                        i++;
-                        count += type_string(arg);
-                        i++;
-                        break;
-                case 'd':
-                        i++;
-                        count += type_dec(arg);
-                        i++;
-                        break;
-                case 'i':
-                        i++;
-                        count += type_int(arg);
-                        i++;
-                        break;
-                case '%' :
-                         i++;
-                        count += *type_porcent(arg);
-                        i++;
-                        break;
-        
-                default:
-                        break;
-		i++;
-	}
-	while (format[i] != '\0')
-	{
-		_putchar(format[i]);
-		count++;
-		i++;
-	}
-	va_end(arg);
-	return (count);
+	va_start(x, format);
+    for (i = 0; format[i]; i++);
+
+    va_end(x);
+    return(count)
+
+
 }
