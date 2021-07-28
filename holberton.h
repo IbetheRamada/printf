@@ -9,19 +9,19 @@
 #include <stdlib.h>
 #include <stddef.h>
 
-typedef struct t_v
+typedef struct type_v
 {
-	char tv;
-	int (*fn)(va_list);
-} t_v;
-
+	char op;
+	int (*fn)(va_list arguments);
+} tv;
 
 /*------------------*/
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int _strcmp(char *s1, char *s2);
+int (*type_of_variable(const char s))(va_list);
 int variable_identifier();
-int type_of_variable();
 int type_char(va_list c);
 int type_string(va_list string);
 int type_dec(va_list d);
