@@ -36,9 +36,9 @@ int _printf(const char *format, ...)
 			if (fptr == NULL)
 			{
 				_putchar('%');
-						_putchar(format[i]);
-						count++;
-						continue;
+					_putchar(format[i]);
+					count++;
+					continue;
 			}
 			count = count + fptr(lst) - 1;
 		}
