@@ -80,8 +80,7 @@ int type_dec(va_list d)
 int type_int(va_list inter)
 {
 	int in;
-
-	printf("llegue");
+	
 	in = type_dec(inter);
 	return (in);
 }
