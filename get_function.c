@@ -33,19 +33,3 @@ int (*type_of_variable(const char s))(va_list)
 	}
 	return (NULL);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

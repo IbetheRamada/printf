@@ -167,17 +167,3 @@ int type_octal(va_list o)
 	return (count);
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

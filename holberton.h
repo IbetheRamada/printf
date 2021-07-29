@@ -32,6 +32,5 @@ int type_octal(va_list o);
 char *type_porcent(va_list arg);
 int *type_rev(va_list rev);
 
-
 /*------------------*/
 #endif /* Holberton_h */
