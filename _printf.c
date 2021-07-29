@@ -23,8 +23,8 @@ int _printf(const char *format, ...)
 	}
 	for (i = 0; format[i] != '\0'; i++)
 	{
-		/*Aquí detecta si despues del primer carácter especial le sigue 
-		el segundo caracter especial predefinidos*/
+		/* Aquí detecta si despues del primer carácter especial le sigue
+		el segundo caracter especial predefinidos */
 		if (format[i] == '%' && format[i + 1] == ' ')
 		{
 			/*Aquí detecta si despues de dos espacios del format es '\0' devuelve -1*/
