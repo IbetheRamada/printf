@@ -23,19 +23,24 @@ int _printf(const char *format, ...)
 	}
 	for (i = 0; format[i] != '\0'; i++)
 	{
+		/*Aquí detecta si despues del primer carácter especial le sigue 
+		el segundo caracter especial predefinidos*/
 		if (format[i] == '%' && format[i + 1] == ' ')
 		{
+			/*Aquí detecta si despues de dos espacios del format es '\0' devuelve -1*/
 			if (format[i + 2] == '\0')
 				return (-1);
 			i = i + 2;
 			count++;
 		}
 		if (format[i] == '%')
-		{	i++;
+		{	
+			/*Aquí entra cuando nos pasan un caracter especial predefinido*/
+			i++;
 			fptr = type_of_variable(format[i]);
 			if (fptr == NULL)
 			{
-				_putchar('%');
+				
 				_putchar(format[i]);
 				count++;
 				continue;
@@ -44,7 +49,9 @@ int _printf(const char *format, ...)
 			count = count + fptr(lst) - 1;
 		}
 		else
-		{	_putchar(format[i]);
+		{	
+			/*Aquí entra solo cuando le pasan por parametro unicamente un string al format*/
+			_putchar(format[i]);
 			count++;
 		}
 	}

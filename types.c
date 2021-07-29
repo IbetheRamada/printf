@@ -3,7 +3,7 @@
 #include "holberton.h"
 /**
  * type_char - prints character c
- * @c: Variable
+ * @ch: Variable
  * Return: Result
  */
 int type_char(va_list ch)
@@ -17,7 +17,7 @@ int type_char(va_list ch)
 
 /**
  * type_string - Funtion of string
- * @s: A Pointer
+ * @string: A Pointer
  * Return: Result Parameter
  */
 int type_string(va_list string)
@@ -40,7 +40,7 @@ int type_string(va_list string)
 
 /**
  * type_dec - prints decimal
- * @n: variable
+ * @d: variable
  * Return: result decimal.
  */
 int type_dec(va_list d)
@@ -74,7 +74,7 @@ int type_dec(va_list d)
 }
 /**
  * type_int- prints integer
- * @n: Variable
+ * @inter: Variable
  * Return: result integer
  */
 int type_int(va_list inter)
@@ -87,8 +87,8 @@ int type_int(va_list inter)
 }
 
 /**
- * type__porcent - prints "%" character
- * @mod: list of arguments, va_list
+ * type_porcent - prints "%" character
+ * @arg: list of arguments, va_list
  *
  * Return: the number of printed chars, int
  */
@@ -103,69 +103,4 @@ char *type_porcent(va_list arg)
 	s[1] = '\0';
 	(void)arg;
 	return (s);
-}
-
-/**
-* type_unsigned - a function with a unsigned
-*@u: a variable
-*
-*Return: Always(count) (success)
-*/
-int type_unsigne(va_list u)
-{
-	unsigned int a[10];
-	unsigned int i, m, n, sum;
-	int count;
-
-	n = va_arg(u, unsigned int);
-	m = 1000000000; /* (10 ^ 9) */
-	a[0] = n / m;
-	for (i = 1; i < 10; i++)
-	{
-		m /= 10;
-		a[i] = (n / m) % 10;
-	}
-	for (i = 0, sum = 0, count = 0; i < 10; i++)
-	{
-		sum += a[i];
-		if (sum || i == 9)
-		{
-			_putchar('0' + a[i]);
-			count++;
-		}
-	}
-	return (count);
-
-}
-/**
-*type_octal - a function that return a octal
-*
-*@o: a variable with a octal
-*Return: Always(count) (success)
-*/
-int type_octal(va_list o)
-{
-	unsigned int a[11];
-	unsigned int i, m, n, sum;
-	int count;
-
-	n = va_arg(o, unsigned int);
-	m = 1073741824; /* (8 ^ 10) */
-	a[0] = n / m;
-	for (i = 1; i < 11; i++)
-	{
-		m /= 8;
-		a[i] = (n / m) % 8;
-	}
-	for (i = 0, sum = 0, count = 0; i < 11; i++)
-	{
-		sum += a[i];
-		if (sum || i == 10)
-		{
-			_putchar('0' + a[i]);
-			count++;
-		}
-	}
-	return (count);
-
 }
