@@ -8,7 +8,11 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <stddef.h>
-
+/**
+*struct type_v - structure.
+*@op: a char
+*@fn: a int that call va_list
+*/
 typedef struct type_v
 {
 	char op;
@@ -20,7 +24,6 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int _strcmp(char *s1, char *s2);
 int (*type_of_variable(const char s))(va_list);
-int variable_identifier();
 int type_char(va_list c);
 int type_string(va_list string);
 int type_dec(va_list d);

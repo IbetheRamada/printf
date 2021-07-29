@@ -1,28 +1,45 @@
 # printf
-Printf Project
 
-Description:
-printf is the C language function to do formatted printing. The same function is also available in PERL. This paper explains how printf works, and how to design the proper formatting specification for any occasion.
+# Description:
 
+printf is the C language function to do formatted printing. The same function is also available in PERL. This paper
+explains how printf works, and how to design the proper formatting specification for any occasion.
 The conversion specifiers:
+
 %c: Prints a single character.
+
 %s: Prints a string of characters.
+
 %d: Prints integers.
+
 %i: Prints integers.
 
-Requirements
+# Requirements
 
-General
 Allowed editors: vi, vim, emacs
-All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
-All your files should end with a new line
-A README.md file, at the root of the folder of the project is mandatory
-Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
-You are not allowed to use global variables
-No more than 5 functions per file
-In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
-The prototypes of all your functions should be included in your header file called holberton.h
-Don’t forget to push your header file
-All your header files should be include guarded
-Note that we will not provide the _putchar function for this project
 
+All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic
+-std=gnu89
+
+All your files should end with a new line
+
+A README.md file, at the root of the folder of the project is mandatory
+
+Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
+
+You are not allowed to use global variables
+
+No more than 5 functions per file
+
+In the following examples, the main.c files are shown as examples. You can use them to test your functions, but you
+don’t have to push them to your repo (if you do we won’t take them into account). 
+
+We will use our own main.c files at compilation. Our main.c files might be different from the one shown in the examples
+
+The prototypes of all your functions should be included in your header file called holberton.h
+
+Don’t forget to push your header file
+
+All your header files should be include guarded
+
+Note that we will not provide the _putchar function for this project

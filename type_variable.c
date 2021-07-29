@@ -8,7 +8,7 @@
  */
 int type_char(va_list ch)
 {
-	char c = va_arg(ch, int );
+	char c = va_arg(ch, int);
 
 	_putchar(c);
 
@@ -25,7 +25,7 @@ int type_string(va_list string)
 	char *s = va_arg(string, char *);
 
 	unsigned int i = 0;
-	
+
 	if (s == NULL)
 		s = "(null)";
 
@@ -80,6 +80,7 @@ int type_dec(va_list d)
 int type_int(va_list inter)
 {
 	int in;
+
 	printf("llegue");
 	in = type_dec(inter);
 	return (in);
@@ -103,6 +104,7 @@ char *type_porcent(va_list arg)
 	(void)arg;
 	return (s);
 }
+
 /**
 * type_unsigned - a function with a unsigned
 *@u: a variable
