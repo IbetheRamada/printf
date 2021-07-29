@@ -109,7 +109,7 @@ char *type_porcent(va_list arg)
 *
 *Return: Always(count) (success)
 */
-int type_unsigned(va_list u)
+int type_unsigne(va_list u)
 {
 	unsigned int a[10];
 	unsigned int i, m, n, sum;
