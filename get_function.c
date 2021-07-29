@@ -31,17 +31,3 @@ int (*type_of_variable(const char s))(va_list)
 	}
 	return (NULL);
 }
-<<<<<<< HEAD:get_function.h
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> 9837d07a0d1eb1b9cb7a59a118bffdd8c8628a3e:get_function.c

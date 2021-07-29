@@ -28,14 +28,11 @@ int type_char(va_list c);
 int type_string(va_list string);
 int type_dec(va_list d);
 int type_int(va_list i);
-<<<<<<< HEAD
-=======
 int type_unsigne(va_list u);
 int type_octal(va_list o);
 
 char *type_porcent(va_list arg);
 int *type_rev(va_list rev);
->>>>>>> 9837d07a0d1eb1b9cb7a59a118bffdd8c8628a3e
 
 /*------------------*/
 #endif /* Holberton_h */
