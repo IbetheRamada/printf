@@ -20,7 +20,6 @@ typedef struct type_v
 } tv;
 
 /*------------------*/
-
 int _putchar(char c);
 int _printf(const char *format, ...);
 int _strcmp(char *s1, char *s2);

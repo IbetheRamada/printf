@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
-#include <stdarg.h>
 
 /**
  * type_of_variable - checks for flags for format specifiers
