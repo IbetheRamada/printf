@@ -1,6 +1,4 @@
 #include "holberton.h"
-#include <stdio.h>
-#include <stdarg.h>
 
 /**
  * get_percent - checks for flags for format specifiers
@@ -31,11 +29,6 @@ int (*type_of_variable(const char s))(va_list)
 	}
 	return (NULL);
 }
-
-
-
-
-
 
 
 
