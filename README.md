@@ -14,7 +14,7 @@ The conversion specifiers:
 
 %i: Prints integers.
 
-#Requirements
+# Requirements
 
 Allowed editors: vi, vim, emacs
 
