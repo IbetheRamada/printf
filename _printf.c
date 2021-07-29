@@ -14,7 +14,6 @@ int _printf(const char *format, ...)
 	int count = 0;
 	int i;
 	int (*fptr)(va_list lst);
-
 	va_start(lst, format);
 
 	if (format == NULL)
@@ -34,8 +33,7 @@ int _printf(const char *format, ...)
 		{	i++;
 			fptr = type_of_variable(format[i]);
 			if (fptr == NULL)
-			{
-				
+			{			
 					_putchar('%');
 					_putchar(format[i]);
 					count++;
