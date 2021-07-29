@@ -17,8 +17,10 @@ int _printf(const char *format, ...)
 
 	va_start(lst, format);
 
-if (format == NULL )
+	if (format == NULL)
+	{
 		return (-1);
+	}
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%' && format[i + 1] == ' ')
@@ -34,10 +36,11 @@ if (format == NULL )
 			if (fptr == NULL)
 			{
 				_putchar('%');
-				_putchar(format[i]);
-				count++;
+						_putchar(format[i]);
+						count++;
+						continue;
 			}
-			count ++;
+			count = count + fptr(lst) - 1;
 		}
 		else
 		{	_putchar(format[i]);
