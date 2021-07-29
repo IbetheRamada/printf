@@ -40,6 +40,7 @@ int _printf(const char *format, ...)
 			fptr = type_of_variable(format[i]);
 			if (fptr == NULL)
 			{
+				/*en caso de que el puntero es NULL entre a la función y si encuentra un'%' continue imprimiendo la iteración*/
 				if (format[i] =='%')
 					_putchar(format[i]);
 				else{
@@ -50,7 +51,7 @@ int _printf(const char *format, ...)
 				continue;
 			}
 
-			count = count + fptr(lst) - 1;
+			count = count + fptr(lst) - 1; /*continue hacieno la iteración del programa*/
 		}
 		else
 		{	

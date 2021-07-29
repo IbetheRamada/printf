@@ -8,6 +8,7 @@
 */
 int type_unsigne(va_list u)
 {
+    /*En esta función entra un entero sin signo y se imprime*/
 	unsigned int a[10];
 	unsigned int i, m, n, sum;
 	int count;
@@ -40,6 +41,7 @@ int type_unsigne(va_list u)
 */
 int type_octal(va_list o)
 {
+    /*En esta función entra un óctal y se imprime*/
 	unsigned int a[11];
 	unsigned int i, m, n, sum;
 	int count;

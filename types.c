@@ -8,6 +8,7 @@
  */
 int type_char(va_list ch)
 {
+	/*En esta función entra un carácter y se imprime*/
 	char c = va_arg(ch, int);
 
 	_putchar(c);
@@ -22,6 +23,7 @@ int type_char(va_list ch)
  */
 int type_string(va_list string)
 {
+	/*En esta función entra un string y se imprime*/
 	char *s = va_arg(string, char *);
 
 	unsigned int i = 0;
@@ -45,6 +47,7 @@ int type_string(va_list string)
  */
 int type_dec(va_list d)
 {
+	/*En esta función entra un decimal y se imprime*/
 	int i = 0;
 	int mod = 1;
 	int dec;
@@ -79,8 +82,9 @@ int type_dec(va_list d)
  */
 int type_int(va_list inter)
 {
+	/*En esta función entra un entero y se imprime*/
 	int in;
-	
+
 	in = type_dec(inter);
 	return (in);
 }
@@ -93,6 +97,7 @@ int type_int(va_list inter)
  */
 char *type_porcent(va_list arg)
 {
+	/*En esta función entra un carácter '%' y se imprime*/
 	char *s;
 
 	s = malloc(sizeof(char) * 2);
