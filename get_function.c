@@ -19,7 +19,6 @@ int (*type_of_variable(const char s))(va_list)
 		{'i', type_int},
 		{'u', type_unsigne},
 		{'o', type_octal},
-
 		{'\0', NULL}
 	};
 
