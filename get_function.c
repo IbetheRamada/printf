@@ -3,7 +3,7 @@
 #include <stdarg.h>
 
 /**
- * get_percent - checks for flags for format specifiers
+ * type_of_variable - checks for flags for format specifiers
  *
  * @s: character compared if it is one of the format specifiers
  *
