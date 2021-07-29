@@ -35,11 +35,13 @@ int _printf(const char *format, ...)
 			fptr = type_of_variable(format[i]);
 			if (fptr == NULL)
 			{
-				_putchar('%');
+				
+					_putchar('%');
 					_putchar(format[i]);
 					count++;
 					continue;
 			}
+
 			count = count + fptr(lst) - 1;
 		}
 		else
