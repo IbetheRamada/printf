@@ -40,8 +40,12 @@ int _printf(const char *format, ...)
 			fptr = type_of_variable(format[i]);
 			if (fptr == NULL)
 			{
-				
-				_putchar(format[i]);
+				if (format[i] =='%')
+					_putchar(format[i]);
+				else{
+					_putchar(format[i - 1]);
+					_putchar(format[i]);
+				}
 				count++;
 				continue;
 			}
